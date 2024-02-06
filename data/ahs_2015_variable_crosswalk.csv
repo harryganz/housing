@@ -1,0 +1,434 @@
+Topic,Subtopic,Description,2015 Variable Name,2011/2013 Variable Name
+Admin,Interview Status,Control number,CONTROL,CONTROL
+Admin,Interview Status,Interview status,INTSTATUS,STATUS
+Admin,Interview Status,Interview month,INTMONTH,DATE
+Admin,Interview Status,Interview language,INTLANG,LANG
+Admin,Interview Status,Interview mode,INTMODE,PERSINT
+Admin,Geography,Census division,DIVISION,DIVISION
+Admin,Geography,2013 OMB CBSA code,OMB13CBSA,CMSA
+Admin,Weighting,Final weight,WEIGHT,WEIGHT
+Admin,Weighting,Flag indicating split sample group,SPLITSAMP,Not Available
+Admin,Weighting,Final weight used for split sample: group 1 topical modules ,SP1WEIGHT,SPLTWGT1
+Admin,Weighting,Final weight used for split sample: group 2 topical modules ,SP2WEIGHT,SPLTWGT2
+Admin,Weighting,Replicate weight (XXX represents 1 - 160),REPWEIGHTXXX,REPWGTXXX
+Admin,Weighting,Replicate weight for split sample: group 1 topical modules (XXX represents 1 - 160),SP1REPWGTXXX,SPLT1WGTXXX
+Admin,Weighting,Replicate weight for split sample: group 2 topical modules (XXX represents 1 - 160),SP2REPWGTXXX,SPLT2WGTXXX
+Admin,Edit Variables,Edit flag for XXXXX (where (XXXXX represents the name of the variable),JXXXXX,JXXXXX
+Occupancy and Tenure,Tenure,Owner or renter status of unit,TENURE,TENURE
+Occupancy and Tenure,Tenure,Flag indicating unit is a condominium ,CONDO,CONDO
+Occupancy and Tenure,Tenure,Flag indicating unit is part of a homeowner's association,HOA,Not Available
+Occupancy and Tenure,Tenure,Flag indicating owner owns the lot,OWNLOT,OWNLOT
+Occupancy and Tenure,Tenure,Flag indicating there is an owner or property manager onsite,MGRONSITE,OWNHERE
+Occupancy and Tenure,Vacancy Characteristics,Vacancy status,VACANCY,VACANCY
+Occupancy and Tenure,Vacancy Characteristics,Flag indicating ownership of unit time shared,TIMESHARE,TIMSHR
+Occupancy and Tenure,Vacancy Characteristics,Flag indicating mobile home to be moved,MHMOVE,MHSTAY
+Occupancy and Tenure,Vacancy Characteristics,Number of months unit has been vacant,VACMONTHS,MOVAC
+Occupancy and Tenure,Vacancy Characteristics,Number of months since this unit has been occupied as permanent home,MONLSTOCC,MOPERM
+Occupancy and Tenure,Seasonal and URE Characteristics,Flag indicating this unit is suitable for year round use,SUITYRRND,YRRND
+Occupancy and Tenure,Seasonal and URE Characteristics,Flag indicating this unit is within 150 miles of owners residence,PERMNEAR,S150MV
+Occupancy and Tenure,Seasonal and URE Characteristics,Number of nights owner spends at this unit,VACRESDAYS,SNITEV
+Occupancy and Tenure,Seasonal and URE Characteristics,Number of nights this unit was rented out,VACRNTDAYS,SRENTV
+Occupancy and Tenure,Seasonal and URE Characteristics,Flag indicating this was a previous usual residence,VACPRIRES,SXUREV
+Occupancy and Tenure,Seasonal and URE Characteristics,Flag indicating this is used for recreational purposes,VACREC,SRECV
+Occupancy and Tenure,Seasonal and URE Characteristics,Flag indicating this unit is used for investment purposes,VACINVEST,SINVV
+Occupancy and Tenure,Seasonal and URE Characteristics,"Flag indicating the owner wishes to sell this unit, but has not been able to do so ",VACSELL,SSELV
+Occupancy and Tenure,Seasonal and URE Characteristics,Flag indicating this unit was inherited,VACINHER,SINHV
+Occupancy and Tenure,Seasonal and URE Characteristics,Flag indicating this unit is owned for some other reason,VACOTH,SOTHV
+Occupancy and Tenure,Months Occupied,Flag indicating unit is typically occupied year-round,OCCYRRND,MOSALL
+Occupancy and Tenure,Months Occupied,Flag indicating unit is typically occupied in January,OCCJANUR,MOSJAN
+Occupancy and Tenure,Months Occupied,Flag indicating unit is typically occupied in February,OCCFEBRU,MOSFEB
+Occupancy and Tenure,Months Occupied,Flag indicating unit is typically occupied in March,OCCMARCH,MOSMAR
+Occupancy and Tenure,Months Occupied,Flag indicating unit is typically occupied in April,OCCAPRIL,MOSAPR
+Occupancy and Tenure,Months Occupied,Flag indicating unit is typically occupied in May,OCCMAY,MOSMAY
+Occupancy and Tenure,Months Occupied,Flag indicating unit is typically occupied in June,OCCJUNE,MOSJUN
+Occupancy and Tenure,Months Occupied,Flag indicating unit is typically occupied in July,OCCJULY,MOSJUL
+Occupancy and Tenure,Months Occupied,Flag indicating unit is typically occupied in August,OCCAUGUST,MOSAUG
+Occupancy and Tenure,Months Occupied,Flag indicating unit is typically occupied in September,OCCSEPTEM,MOSSEP
+Occupancy and Tenure,Months Occupied,Flag indicating unit is typically occupied in October,OCCOCTOB,MOSOCT
+Occupancy and Tenure,Months Occupied,Flag indicating unit is typically occupied in November,OCCNOVEM,MOSNOV
+Occupancy and Tenure,Months Occupied,Flag indicating unit is typically occupied in December,OCCDECEM,MOSDEC
+Structural,General,Type of housing unit,BLD,TYPE
+Structural,General,Year unit was built,YRBUILT,BUILT
+Structural,General,Flag indicating unit has undergone a gut rehabilitation in the last 10 years,GUTREHB,Not Available
+Structural,Exterior Features,Lot size (acres),LOTSIZE,LOT
+Structural,Exterior Features,Flag indicating unit has a garage or carport ,GARAGE,GARAGE
+Structural,Exterior Features,Flag indicating unit has porch or deck or balcony or patio,PORCH,PORCH
+Structural,Exterior Features,Flag indicating unit's entrance is accessible without climbing up or down any stairs,NOSTEP,NOSTEP
+Structural,Exterior Features,Flag indicating unit's windows covered with metal bars,WINBARS,EBAR
+Structural,Exterior Features,Flag indicating entry system required to access multifamily building,ENTRYSYS,ACCESSB
+Structural,Exterior Features,Type of manufactured or mobile home ,MHWIDE,MOBILTYP
+Structural,Exterior Features,Type of mobile home anchoring,MHANCHOR,ANCHOR
+Structural,Interior Features,Type of foundation,FOUNDTYPE,CELLAR
+Structural,Interior Features,Unit size (square feet),UNITSIZE,UNITSF
+Structural,Interior Features,Number of stories in building ,STORIES,FLOORS
+Structural,Interior Features,Number of floors within the unit,UNITFLOORS,FLOORS
+Structural,Interior Features,Number of rooms in unit,TOTROOMS,ROOMS
+Structural,Interior Features,Number of bedrooms in unit,BEDROOMS,BEDROOMS
+Structural,Interior Features,Number of bathrooms in unit,BATHROOMS,BATH
+Structural,Interior Features,Number of kitchens in unit,KITCHENS,KITCH
+Structural,Interior Features,Number of dining rooms in unit,DINING,DINING
+Structural,Interior Features,Number of laundry or utility rooms in unit,LAUNDY,LAUNDY
+Structural,Interior Features,Number of other finished rooms in unit,FINROOMS,OTHFN
+Structural,Interior Features,Number of other unfinished rooms in unit,UFINROOMS,OTHRUN
+Structural,Interior Features,Flag indicating the unit's kitchen facilities are for the exclusive use of the household,KITEXCLU,KEXCLU
+Structural,Interior Features,Flag indicating the unit's bathroom facilities are for the exclusive use of the household ,BATHEXCLU,PLUMB
+Equipment & Appliances,Heating,Type of main heating equipment,HEATTYPE,HEQUIP
+Equipment & Appliances,Heating,Type of main heating fuel,HEATFUEL,HFUEL
+Equipment & Appliances,Heating,Flag indicating unit has a useable fireplace,FIREPLACE,FPLWK
+Equipment & Appliances,Cooling,Type of primary air conditioning,ACPRIMARY,AIR;AIRSYS
+Equipment & Appliances,Cooling,Type of secondary air conditioning,ACSECNDRY,AIR;AIRSYS
+Equipment & Appliances,Water and Sewer,Type of sewer system,SEWTYPE,SEWDIS
+Equipment & Appliances,Water and Sewer,Number of units connected to septic tank or cesspool,SEWUSERS,SEWDUS
+Equipment & Appliances,Water and Sewer,Source of water for unit,WATSOURCE,WATER
+Equipment & Appliances,Water and Sewer,Type of hot water system,HOTWATER,HOTPIP
+Equipment & Appliances,Appliances,Type of cooking equipment,COOKTYPE,COOK;OVEN
+Equipment & Appliances,Appliances,Type of fuel used most for cooking,COOKFUEL,CFUEL
+Equipment & Appliances,Appliances,Flag indicating unit has a working refrigerator,FRIDGE,REFR
+Equipment & Appliances,Appliances,Flag indicating unit has a working dishwasher,DISHWASH,DISH
+Equipment & Appliances,Appliances,Flag indicating unit has a kitchen sink,KITCHSINK,SINK
+Equipment & Appliances,Appliances,Flag indicating unit has a working washing machine,WASHER,WASH
+Equipment & Appliances,Appliances,Type of clothes dryer,DRYER,DRY
+Housing Problems,Electrical Problems,Flag indicating electrical wiring concealed by walls,NOWIRE,NOWIRE
+Housing Problems,Electrical Problems,Number of times fuses blown or circuit breakers tripped in last 3 months,FUSEBLOW,IFBLOW
+Housing Problems,Electrical Problems,Flag indicating every room has working electrical plug,PLUGS,PLUGS
+Housing Problems,Heating Problems,Flag indicating unit was uncomfortably cold for 24 hours or more last winter,COLD,FREEZE
+Housing Problems,Heating Problems,Flag indicating unit as uncomfortably cold for 24 hours or more last winter because the main heating equipment broke down,COLDEQ,IFCOLD
+Housing Problems,Heating Problems,Number of times main heating equipment broke down for 6 hours or more (provided that main heating equipment broke down and unit was uncomfortably cold for 24 hours or more last winter),COLDEQFREQ,NUMCOLD
+Housing Problems,Heating Problems,Flag indicating unit was uncomfortably cold for 24 hours or more last winter due to utility interruption,COLDUTIL,WHYCD1
+Housing Problems,Heating Problems,Flag indicating unit was uncomfortably cold for 24 hours or more last winter due to inadequate heating capacity,COLDHTCAP,WHYCD2
+Housing Problems,Heating Problems,Flag indicating unit was uncomfortably cold for 24 hours or more last winter due to inadequate insulation,COLDINSUL,WHYCD3
+Housing Problems,Heating Problems,Flag indicating unit was uncomfortably cold for 24 hours or more last winter due to cost of heating,COLDCOST,WHYCD4
+Housing Problems,Heating Problems,Flag indicating unit was uncomfortably cold for 24 hours or more last winter because of some other reason,COLDOTHER,WHYCD5
+Housing Problems,Plumbing Problems,Flag indicating if unit had any toilet breakdowns in last 3 months,NOTOIL,IFTLT
+Housing Problems,Plumbing Problems,Number of toilet breakdowns within last 3 months that lasted 6 hours or more,NOTOILFREQ,NUMTLT
+Housing Problems,Plumbing Problems,Flag indicating if unit was completely without running water in the last 3 months,NOWAT,IFDRY
+Housing Problems,Plumbing Problems,Number of times unit was completely without running water in the last 3 months,NOWATFREQ,NUMDRY
+Housing Problems,Plumbing Problems,Number of sewer breakdowns within last 3 months that last 6 hours or more,SEWBREAK,NUMSEW
+Housing Problems,Pests,Number of times there was signs of rodents in last 12 months,RODENT,EVROD
+Housing Problems,Pests,Number of times there were signs of live or dead cockroaches in last 12 months,ROACH,EROACH
+Housing Problems,Structural Problems,"Flag indicating foundation has holes, cracks, or crumbling ",FNDCRUMB,ECRUMB
+Housing Problems,Structural Problems,Flag indicating roof has holes,ROOFHOLE,EHOLER
+Housing Problems,Structural Problems,Flag indicating roof has missing shingles or other roofing materials,ROOFSHIN,EMISSR
+Housing Problems,Structural Problems,Flag indicating roof’s surface sags or is uneven,ROOFSAG,ESAGR
+Housing Problems,Structural Problems,"Flag indicating outside walls have missing siding, bricks, or other missing wall materials",WALLSIDE,EMISSW
+Housing Problems,Structural Problems,"Flag indicating outside walls slope, lean, buckle, or slant",WALLSLOPE,ESLOPW
+Housing Problems,Structural Problems,Flag indicating  windows are boarded up,WINBOARD,EBOARD
+Housing Problems,Structural Problems,Flag indicating  windows are broken,WINBROKE,EBROKE
+Housing Problems,Structural Problems,Flag indicating floor has holes ,FLOORHOLE,HOLES
+Housing Problems,Structural Problems,Flag indicating inside walls or ceilings have open holes or cracks,WALLCRACK,CRACKS
+Housing Problems,Structural Problems,Flag indicating interior area of peeling paint larger than 8 x 11,PAINTPEEL,BIGP
+Housing Problems,Leaking and Mold,Flag indicating outside water leaks in last 12 months,LEAKO,LEAK
+Housing Problems,Leaking and Mold,Flag indicating the outside water leak came from the roof,LEAKOROOF,RLEAK
+Housing Problems,Leaking and Mold,Flag indicating the outside water leak came from the basement,LEAKOBASE,BLEAK
+Housing Problems,Leaking and Mold,Flag indicating the outside water leak came from the walls or around closed windows or closed doors,LEAKOWALL,WLEAK
+Housing Problems,Leaking and Mold,Flag indicating the outside water leak came from somewhere else,LEAKOOTH,OTLEAK
+Housing Problems,Leaking and Mold,Flag indicating inside water leaks in last 12 months,LEAKI,ILEAK
+Housing Problems,Leaking and Mold,Flag indicating the inside water leak came from own plumbing fixtures backing up or overflowing,LEAKIPLUM,PLEAK
+Housing Problems,Leaking and Mold,Flag indicating the inside water leak came from pipes leaking (including pipes from other apartments),LEAKIPIPE,PILEAK
+Housing Problems,Leaking and Mold,Flag indicating the inside water leak came from broken water heater,LEAKIWATH,WTRHRL
+Housing Problems,Leaking and Mold,Flag indicating the inside water leak came from other source,LEAKIOTH,NLEAK1
+Housing Problems,Leaking and Mold,Flag indicating the inside water leak came from unknown source,LEAKIDK,NLEAK2
+Housing Problems,Leaking and Mold,Flag indicating mold was present in kitchen in the last 12 months,MOLDKITCH,MOLDKITCH
+Housing Problems,Leaking and Mold,Flag indicating mold was present in bathroom in the last 12 months,MOLDBATH,MOLDBATH
+Housing Problems,Leaking and Mold,Flag indicating mold was present in bedroom in the last 12 months,MOLDBEDRM,MOLDBEDRM
+Housing Problems,Leaking and Mold,Flag indicating mold was present in living room in the last 12 months,MOLDLROOM,MOLDLROOM
+Housing Problems,Leaking and Mold,Flag indicating mold was present in basement in the last 12 months,MOLDBASEM,MOLDBASEM
+Housing Problems,Leaking and Mold,Flag indicating mold was present in some other room in the last 12 months,MOLDOTHER,MOLDOTHER
+Housing Problems,General,Type of housing adequacy,ADEQUACY,ZADEQ
+Housing Problems,General,Type of upkeep problems,UPKEEP,Not Available
+Demographics,Total Household Demographics,Type of household,HSHLDTYPE,Not Available
+Demographics,Total Household Demographics,Number of persons living in this unit,NUMPEOPLE,PER
+Demographics,Total Household Demographics,"Number of persons age 18 and over, living in this unit",NUMADULTS,ZADULT
+Demographics,Total Household Demographics,"Number of persons age 65 and over, living in this unit",NUMELDERS,ELDER
+Demographics,Total Household Demographics,"Number of children under age 6, living in this unit ",NUMYNGKIDS,Not Available
+Demographics,Total Household Demographics,"Number of children age 6 through 17, living in this unit",NUMOLDKIDS,Not Available
+Demographics,Total Household Demographics,Number of veterans living in this unit,NUMVETS,Not Available
+Demographics,Total Household Demographics,Type of military household,MILHH,Not Available
+Demographics,Total Household Demographics,Number of non-relatives living in this unit,NUMNONREL,NONREL
+Demographics,Total Household Demographics,Flag indicating same sex married household ,SAMESEXHH,Not Available
+Demographics,Total Household Demographics,Flag indicating unmarried partner household,PARTNER,Not Available
+Demographics,Total Household Demographics,Type of multigenerational household,MULTIGEN,Not Available
+Demographics,Total Household Demographics,Flag indicating grandparent headed household with no parent present,GRANDHH,Not Available
+Demographics,Total Household Demographics,Number of subfamilies living in this unit,NUMSUBFAM,Not Available
+Demographics,Total Household Demographics,Number of secondary families living in this unit,NUMSECFAM,Not Available
+Demographics,Total Household Disability,Number of persons living in this unit who have difficulty hearing,NUMHEAR,Not Available
+Demographics,Total Household Disability,Number of persons living in this unit who have difficulty seeing,NUMSEE,Not Available
+Demographics,Total Household Disability,Number of persons living in this unit who have difficulty concentrating or remembering,NUMMEMRY,Not Available
+Demographics,Total Household Disability,Number of persons living in this unit who have difficulty walking or climbing stairs,NUMWALK,Not Available
+Demographics,Total Household Disability,Number of persons living in this unit who have difficulty dressing or bathing,NUMCARE,Not Available
+Demographics,Total Household Disability,Number of persons living in this unit who have difficulty doing errands,NUMERRND,Not Available
+Demographics,Total Household Disability,Flag indicating disabled person household,DISHH,HDSB
+Demographics,Householder Demographics,Sex of householder,HHSEX,HHSEX
+Demographics,Householder Demographics,Age of householder,HHAGE,HHAGE
+Demographics,Householder Demographics,Marital status of householder,HHMAR,HHMAR
+Demographics,Householder Demographics,Race of householder,HHRACE,HHRACE
+Demographics,Householder Demographics,Race of householder (Asian group),HHRACEAS,Not Available
+Demographics,Householder Demographics,Race of householder (Native Hawaiian or other Pacific Islander group),HHRACEPI,Not Available
+Demographics,Householder Demographics,Spanish origin of householder,HHSPAN,HHSPAN
+Demographics,Householder Demographics,US citizenship of householder,HHCITSHP,HHCITSHP
+Demographics,Householder Demographics,Country of birth of householder,HHNATVTY,HHNATVTY
+Demographics,Householder Demographics,Year householder came to US,HHINUSYR,HHINUSYR
+Demographics,Householder Demographics,Year householder moved in,HHMOVE,HHMOVE
+Demographics,Householder Demographics,Educational level of householder,HHGRAD,HHGRAD
+Demographics,Householder Demographics,"Number of the householder's children under age 6, living in this unit ",HHYNGKIDS,Not Available
+Demographics,Householder Demographics,"Number of the householder's children age 6 through 17, living in this unit",HHOLDKIDS,Not Available
+Demographics,Householder Demographics,"Number of the householder's unmarried children age 18 and over, living in this unit",HHADLTKIDS,Not Available
+Demographics,Householder Disability,Flag indicating householder has difficulty hearing,HHHEAR,HHPHEAR
+Demographics,Householder Disability,Flag indicating householder has difficulty seeing,HHSEE,HHPSEE
+Demographics,Householder Disability,Flag indicating householder has difficulty concentrating or remembering,HHMEMRY,HHPMEMRY
+Demographics,Householder Disability,Flag indicating householder has difficulty walking or climbing stairs,HHWALK,HHPWALK
+Demographics,Householder Disability,Flag indicating householder has difficulty dressing or bathing,HHCARE,HHPCARE
+Demographics,Householder Disability,Flag indicating householder has difficulty doing errands,HHERRND,HHPERRND
+Demographics,Person Demographics,Line number of person,PLINE,PLINE
+Demographics,Person Demographics,Line number of spouse of person,SPOUSE,SPOS
+Demographics,Person Demographics,Line number of parent number one ,FIRPARENT,PAR
+Demographics,Person Demographics,Line number of parent number two ,SECPARENT,PAR
+Demographics,Person Demographics,Flag indicating this person is the respondent,RESPONDENT,Not Available
+Demographics,Person Demographics,Relationship of person to reference person,REL,REL
+Demographics,Person Demographics,Sex of person,SEX,SEX
+Demographics,Person Demographics,Age of person,AGE,AGE
+Demographics,Person Demographics,Marital status of person,MAR,APR
+Demographics,Person Demographics,Race of person,RACE,RACE
+Demographics,Person Demographics,Race of person (Asian group),RACEAS,Not Available
+Demographics,Person Demographics,Race of person (Native Hawaiian or other Pacific Islander group),RACEPI,Not Available
+Demographics,Person Demographics,Spanish origin of person,SPAN,SPAN
+Demographics,Person Demographics,US citizenship of person,CITSHP,CITSHP
+Demographics,Person Demographics,Country of birth of person,NATVTY,NATVTY
+Demographics,Person Demographics,Year person came to the US,INUSYR,INUSYR
+Demographics,Person Demographics,Year person moved in,MOVE,MOVE
+Demographics,Person Demographics,Educational level of person,GRAD,GRAD
+Demographics,Person Demographics,Family number of person,FAMLINE,FAMNUM
+Demographics,Person Demographics,Family relationship of person,FAMREL,FAMREL
+Demographics,Person Demographics,Family type of person,FAMTYP,FAMTYP
+Demographics,Person Demographics,Military status of person,MIL,Not Available
+Demographics,Person Demographics,Flag indicating this person served in September 2001 or later,MLPA,Not Available
+Demographics,Person Demographics,Flag indicating this person served in from August 1990 - August 2001 (including Persian Gulf War),MLPB,Not Available
+Demographics,Person Demographics,Flag indicating this person served in from May 1975 - July 1990,MLPCD,Not Available
+Demographics,Person Demographics,Flag indicating this person served in Vietnam era (August 1964 - April 1975),MLPE,Not Available
+Demographics,Person Demographics,Flag indicating this person served from February 1955 - July 1964,MLPFG,Not Available
+Demographics,Person Demographics,Flag indicating this person served in Korean War (July 1950 - January 1955),MLPH,Not Available
+Demographics,Person Demographics,Flag indicating this person served from January 1947 - June 1950,MLPI,Not Available
+Demographics,Person Demographics,Flag indicating this person served in World War II (December 1941 - December 1946),MLPJ,Not Available
+Demographics,Person Demographics,Flag indicating this person served in November 1941 or earlier,MLPK,Not Available
+Demographics,Person Disability,Flag indicating this person has difficulty hearing,PHEAR,PHEAR
+Demographics,Person Disability,Flag indicating this person has difficulty seeing,PSEE,PSEE
+Demographics,Person Disability,Flag indicating this person has difficulty concentrating or remembering,PMEMRY,PMEMRY
+Demographics,Person Disability,Flag indicating this person has difficulty walking or climbing stairs,PWALK,PWALK
+Demographics,Person Disability,Flag indicating this person has difficulty dressing or bathing,PCARE,PCARE
+Demographics,Person Disability,Flag indicating this person has difficulty doing errands,PERRND,PERRND
+Income,Total Household Income,Household Income (past 12 months),HINCP,ZINC2
+Income,Total Household Income,Family income (past 12 months),FINCP,ZINC
+Income,Total Household Income,Flag indicating  food stamp or supplemental nutrition assistance program recipency (past 12 months),FS,QFS1
+Income,Total Household Income,"Flag indicating farm income of 1,000 or more  (past 12 months)",CROPSL,CROPSL
+Income,Person Income,Person's wages or salary income (past 12 months),WAGP,SAL
+Income,Person Income,Person's self-employment income (past 12 months),SEMP,Not Available
+Income,Person Income,"Person's interest, dividends, and net rental income  (past 12 months)",INTP,Not Available
+Income,Person Income,Person's Social Security income  (past 12 months),SSP,Not Available
+Income,Person Income,Person's Supplemental Security income  (past 12 months),SSIP,Not Available
+Income,Person Income,Person's public assistance income  (past 12 months),PAP,Not Available
+Income,Person Income,Person's retirement income  (past 12 months),RETP,Not Available
+Income,Person Income,Person's other income (past 12 months),OIP,Not Available
+Housing Costs,Total Housing Cost,Monthly total mortgage amount (all mortgages),MORTAMT,AMMORT
+Housing Costs,Total Housing Cost,Monthly rent amount,RENT,RENT
+Housing Costs,Total Housing Cost,Monthly total utility amount,UTILAMT,AMTF;AMTT;AMTW;AMTE;AMTG;AMTO
+Housing Costs,Total Housing Cost,Monthly property tax amount,PROTAXAMT,AMTX
+Housing Costs,Total Housing Cost,Monthly homeowner or renter insurance amount,INSURAMT,Not Available
+Housing Costs,Total Housing Cost,Monthly homeowners or condominium association amount,HOAAMT,Not Available
+Housing Costs,Total Housing Cost,Monthly lot rent amount,LOTAMT,Not Available
+Housing Costs,Total Housing Cost,Monthly total housing costs,TOTHCAMT,ZSMHC
+Housing Costs,Utilities,Monthly electric amount,ELECAMT,AMTE
+Housing Costs,Utilities,Monthly gas amount,GASAMT,AMTG
+Housing Costs,Utilities,Monthly oil amount,OILAMT,AMTO
+Housing Costs,Utilities,Monthly amount for other fuels,OTHERAMT,AMTF
+Housing Costs,Utilities,Monthly trash amount,TRASHAMT,AMTT
+Housing Costs,Utilities,Monthly water amount,WATERAMT,AMTW
+Housing Costs,Renter Subsidy,Subsidized renter status and eligibility (admin match),HUDSUB,HUDADMIN
+Housing Costs,Renter Subsidy,Flag indicating rent is limited by rent control or stabilization,RENTCNTRL,RCNTRL
+Housing Costs,Renter Subsidy,Type of rental subsidy (based on respondent report),RENTSUB,VCHRMOV;SUBRNT;PROJ;APPLY;VCHR
+Housing Costs,Affordability,Household income as percent of poverty threshold (rounded),PERPOVLVL,POOR
+Housing Costs,Affordability,Federal poverty level threshold,POVLVLINC,IPOV
+Housing Costs,"Owner's Purchase, Value, and Debt",Number and type of mortgages or similar debts,MORTSTAT,Not Available
+Housing Costs,"Owner's Purchase, Value, and Debt","Year unit bought, obtained, or received",YEARBUY,WHNGET
+Housing Costs,"Owner's Purchase, Value, and Debt",Description of how owner obtained unit,HOWBUY,CUSHOM
+Housing Costs,"Owner's Purchase, Value, and Debt",Purchase price,PRICE,LPRICE
+Housing Costs,"Owner's Purchase, Value, and Debt",Main source of down payment on unit,DWNPAYSRC,DWNPAY
+Housing Costs,"Owner's Purchase, Value, and Debt",Down payment percentage,DWNPAYPCT,DOWNPCT
+Housing Costs,"Owner's Purchase, Value, and Debt",Flag indicating if first-time home buyer,FIRSTHOME,FRSTHO
+Housing Costs,"Owner's Purchase, Value, and Debt",Current market value of unit,MARKETVAL,VALUE
+Housing Costs,"Owner's Purchase, Value, and Debt",Current market value of land on which on mobile/manufactured home now sits,LOTVAL,LVALUE/PVALUE
+Housing Costs,"Owner's Purchase, Value, and Debt",Total remaining debt across all mortgages or similar debts for this unit,TOTBALAMT,HEBAL1-3;HEBAM1-3;UNPBAL1-3
+Housing Costs,"Owner's Purchase, Value, and Debt",Flag indicating lead pipes inspected before purchase,LEADINSP,TPBPIP
+Housing Costs,"Owner's Purchase, Value, and Debt",For rent or sale status of unit,FORSALE,MARKET
+Mortgage Details,Mortgage Origination,Line number of mortgage,MORTLINE,Not Available
+Mortgage Details,Mortgage Origination,Type of loan,LOANTYPE,Not Available
+Mortgage Details,Mortgage Origination,Type of mortgage,MORTTYPE,ARM;BLOON;CANVAR;FIXED;GPM;OTRPM;TIMBOM
+Mortgage Details,Mortgage Origination,Year mortgage obtained,MORTYEAR,YRMOR
+Mortgage Details,Mortgage Origination,Interest rate of mortgage,INTRATE,INTR
+Mortgage Details,Mortgage Origination,Term of mortgage,MORTTERM,TERM
+Mortgage Details,Mortgage Origination,Type of ARM,MORTARM,ARM;TERM;HYBARM;HYBMYR
+Mortgage Details,Mortgage Origination,Final balance due for balloon mortgage,BALLOONAMT,BALAMT
+Mortgage Details,Mortgage Origination,Mortgage new or assumed,MORTNEW,NEWMOR
+Mortgage Details,Mortgage Origination,Percentage of used for purchase of home,MORTPURCH,PERUS1
+Mortgage Details,Mortgage Origination,Percentage of mortgage used for additions or improvements,MORTADDTN,ADDTNS
+Mortgage Details,Mortgage Origination,Source of mortgage financing,MORTSRC,BANK;SELL
+Mortgage Details,Mortgage Origination,Type of Federal government mortgage insurance,MORTGOV,MORTIN
+Mortgage Details,Mortgage Origination,Flag indicating mortgage is subsidized through a state or local government program,MORTSUB,SUBMOR
+Mortgage Details,Mortgage Origination,"Flag indicating mortgage obtained without proof of income, assets, or debts",MORTDOC,DOC
+Mortgage Details,Current Payment Details,Amount of mortgage payment,PMTAMT,PMT
+Mortgage Details,Current Payment Details,Frequency of mortgage payment,PMTFREQ,FMRPMT
+Mortgage Details,Current Payment Details,Amount currently owed on mortgage,UNPBALAMT,UNPBAL
+Mortgage Details,Current Payment Details,Flag indicating principal included in mortgage payment ,PRIPMT,PRIPMT
+Mortgage Details,Current Payment Details,Flag indicating interest included in mortgage payment,INTPMT,INTPMT
+Mortgage Details,Current Payment Details,Flag indicating property taxes included in mortgage payment ,TAXPMT,TAXPMT
+Mortgage Details,Current Payment Details,Flag indicating homeowners insurance included in mortgage payment,INSPMT,INSPMT
+Mortgage Details,Current Payment Details,Flag indicating private mortgage insurance included in mortgage payment ,PMIPMT,PMIPMT
+Mortgage Details,Current Payment Details,Amount of private mortgage insurance included in monthly mortgage payment,PMIAMT,PMIAMT
+Mortgage Details,Current Payment Details,Flag indicating other charges included in mortgage payment,OTHPMT,OTHPMT
+Mortgage Details,Current Payment Details,Amount of other charges in monthly mortgage payment,OTHAMT,AMTM
+Mortgage Details,Payment Change,Flag indicating mortgage payment changed in the past year,PTCHYR,PTCHYR
+Mortgage Details,Payment Change,Amount of mortgage payment change,PTCHAM,PTCHAM
+Mortgage Details,Payment Change,Flag indicating mortgage payment changed because lender modified mortgage to prevent foreclosure,LENMOD,LENMOD
+Mortgage Details,Payment Change,Flag indicating mortgage payment changed because mortgage no longer allows you to decide how much to pay,FXDPM,FXDPM
+Mortgage Details,Payment Change,Flag indicating mortgage payment changed because the minimum payment choice increased,MINPM,MINPM
+Mortgage Details,Payment Change,Flag indicating mortgage payment changed because mortgage changed from interest only to interest plus payment in order to reduce mortgage balance,INTPM,INTPM
+Mortgage Details,Payment Change,Flag indicating mortgage payment changed because mortgage changed from fixed rate to adjustable rate or vice versa,RATEPM,RATEPM
+Mortgage Details,Payment Change,Flag indicating mortgage payment changed because the adjustable interest rate changed,ADJPM,ADJPM
+Mortgage Details,Payment Change,Flag indicating mortgage payment changed because of something else,OTRPM,OTRPM
+Mortgage Details,Refinance,Flag indicating mortgage is a refinance of previous mortgage,REFI,REFI
+Mortgage Details,Refinance,Amount of cash received from refinance,REFICSHAMT,CASH
+Mortgage Details,Refinance,Flag indicating mortgage refinanced to get a lower interest rate,REFILWINT,LOWINT
+Mortgage Details,Refinance,Flag indicating mortgage refinanced to reduce the monthly payment,REFILWPAY,REDMON
+Mortgage Details,Refinance,Flag indicating mortgage refinanced to reduce the payment period,REFILWPER,REDPAY
+Mortgage Details,Refinance,Flag indicating mortgage refinanced to increase the payment period,REFIINCPER,INCPER
+Mortgage Details,Refinance,Flag indicating mortgage refinanced to receive cash or increase the outstanding balance of the loan,REFICSH,GTCASH
+Mortgage Details,Refinance,Flag indicating mortgage refinanced for the option to suspend or temporarily reduce mortgage payments,REFIEXTLN,EXTLON
+Mortgage Details,Refinance,Flag indicating mortgage refinanced for some other reason,REFIOTH,OTHREF
+Mortgage Details,HELOC,Amount of credit limit on home equity loan,HELOCLIM,HECR1
+Mortgage Details,HELOC,Flag indicating home equity loan has a current balance,HELOCBAL,HEBAL1
+Mortgage Details,HELOC,"Flag indicating home equity loan used for additions, improvements, or repairs",HELOCADD,IMPROV
+Home Improvement,General,Total number of home improvement jobs in last two years,REMODJOBS,RAN
+Home Improvement,General,Total cost of home improvement jobs in last two years,REMODAMT,RAC
+Home Improvement,General,Flag indicating  home improvements done to make home more accessible for elderly or disabled in last two years ,HMRACCESS,Not Available
+Home Improvement,General,Flag indicating  home improvements done to make home more energy efficient in last two years ,HMRENEFF,ENEFIC
+Home Improvement,General,Flag indicating  home improvements done to get house ready for sale  in last two years ,HMRSALE,Not Available
+Home Improvement,General,Amount of annual routine maintenance costs,MAINTAMT,CSTMNT
+Home Improvement,Job Specific,Type of home improvement job,JOBTYPE,RAS
+Home Improvement,Job Specific,Flag indicating job was do-it-yourself,JOBDIY,RAH
+Home Improvement,Job Specific,Cost of home improvement job,JOBCOST,RAD
+Home Improvement,Job Specific,Main source of funding for home improvement job,JOBFUNDS,RAH;SUBFIX;TAXCRD;TAXINC
+Home Improvement,Job Specific,Flag indicating if the home improvement job is complete,JOBCOMP,Not Available
+Home Improvement,Job Specific,Year home improvement job was completed,JOBCOMPYR,Not Available
+Home Improvement,Job Specific,Year that the majority of home improvement expenses were incurred for this job,JOBWORKYR,Not Available
+Neighborhood Features,General,Flag indicating respondent thinks the majority of neighbors 55 or older,NORC,NORC
+Neighborhood Features,Nearby Features,Number of buildings with bars on windows within 1/2 block of this housing unit,NEARBARCL,EBARCL
+Neighborhood Features,Nearby Features,Number of buildings that are abandoned or vandalized within 1/2 block of this housing unit,NEARABAND,EABAN
+Neighborhood Features,Nearby Features,"Frequency of trash, litter, or junk in streets, lots, or properties within 1/2 block of this housing unit",NEARTRASH,EJUNK
+Neighborhood Features,Ratings,Rating of unit as a place to live,RATINGHS,HOWH
+Neighborhood Features,Ratings,Rating of neighborhood as place to live,RATINGNH,HOWN
+Neighborhood Features,Ratings,Agree or Disagree: This neighborhood has good schools,NHQSCHOOL,Not Available
+Neighborhood Features,Ratings,Agree or Disagree:  This neighborhood has a lot of petty crime,NHQPCRIME,Not Available
+Neighborhood Features,Ratings,Agree or Disagree:  This neighborhood has a lot of serious crime,NHQSCRIME,Not Available
+Neighborhood Features,Ratings,"Agree or Disagree:  This neighborhood has good bus, subway, or commuter train service",NHQPUBTRN,Not Available
+Neighborhood Features,Ratings,Agree or Disagree:  This neighborhood is at high risk for floods or other disasters,NHQRISK,Not Available
+Recent Movers,Reason for Moving,"Flag indicating respondent, who moved in last two years, was forced to move by landlord, bank, government, or disaster",MOVFORCE,Not Available
+Recent Movers,Reason for Moving,"Flag indicating respondent, who moved in last two years, moved for job",RMJOB,Not Available
+Recent Movers,Reason for Moving,"Flag indicating respondent, who moved in last two years, moved to form household",RMOWNHH,Not Available
+Recent Movers,Reason for Moving,"Flag indicating respondent, who moved in last two years, moved for family",RMFAMILY,Not Available
+Recent Movers,Reason for Moving,"Flag indicating respondent, who moved in last two years, moved because of change in household",RMCHANGE,Not Available
+Recent Movers,Reason for Moving,"Flag indicating respondent, who moved in last two years, moved to reduce commute",RMCOMMUTE,Not Available
+Recent Movers,Reason for Moving,"Flag indicating respondent, who moved in last two years, moved for better home",RMHOME,Not Available
+Recent Movers,Reason for Moving,"Flag indicating respondent, who moved in last two years, moved to reduce housing costs",RMCOSTS,Not Available
+Recent Movers,Reason for Moving,"Flag indicating respondent, who moved in last two years, moved to be in more desirable neighborhood",RMHOOD,Not Available
+Recent Movers,Reason for Moving,"Flag indicating respondent, who moved in last two years, moved for another reason",RMOTHER,Not Available
+Recent Movers,Housing Search,"Flag indicating respondent, who moved in last two years, found home through family, friends, or other word of mouth",SEARCHFAM,Not Available
+Recent Movers,Housing Search,"Flag indicating respondent, who moved in last two years, found home through the Internet",SEARCHNET,Not Available
+Recent Movers,Housing Search,"Flag indicating respondent, who moved in last two years, found home through newspaper or publication",SEARCHPUB,Not Available
+Recent Movers,Housing Search,"Flag indicating respondent, who moved in last two years, found home through real estate agent",SEARCHREA,Not Available
+Recent Movers,Housing Search,"Flag indicating respondent, who moved in last two years, found home through apartment rental agency listing",SEARCHLIST,Not Available
+Recent Movers,Housing Search,"Flag indicating respondent, who moved in last two years, found home through sign outside of building",SEARCHSIGN,Not Available
+Recent Movers,Housing Search,"Flag indicating respondent, who moved in last two years, found home through some other way",SEARCHOTH,Not Available
+Recent Movers,Housing Search,Reason for stopping housing search sooner than preferred,SEARCHSTOP,Not Available
+Recent Movers,Housing Search,Rating of current neighborhood ,NRATE,XNRATE
+Recent Movers,Housing Search,Rating of current home ,HRATE,XHRATE
+Recent Movers,Mover Group 1 Details,Flag indicating move was more than 50 miles (mover group 1),MVG1LOC,Not Available
+Recent Movers,Mover Group 1 Details,Type of structure of former home (mover group 1),MVG1TYPE,XUNIT
+Recent Movers,Mover Group 1 Details,Tenure of former home (mover group 1),MVG1TEN,XTEN
+Recent Movers,Mover Group 1 Details,Number of people in former home (mover group 1),MVG1PER,XPER
+Recent Movers,Mover Group 1 Details,Flag indicating former home was owned/rented by someone in current home (mover group 1),MVG1STAT,XHEAD
+Recent Movers,Mover Group 1 Details,Comparison of housing costs to former home (mover group 1),MVG1COST,XCOST
+Recent Movers,Mover Group 2 Details,Flag indicating move was more than 50 miles (mover group 2),MVG2LOC,Not Available
+Recent Movers,Mover Group 2 Details,Type of structure of former home (mover group 2),MVG2TYPE,XUNIT
+Recent Movers,Mover Group 2 Details,Tenure of former home (mover group 2),MVG2TEN,XTEN
+Recent Movers,Mover Group 2 Details,Number of people in former home (mover group 2),MVG2PER,XPER
+Recent Movers,Mover Group 2 Details,Flag indicating former home was owned/rented by someone in current home (mover group 2),MVG2STAT,XHEAD
+Recent Movers,Mover Group 2 Details,Comparison of housing costs to former home (mover group 2),MVG2COST,XCOST
+Recent Movers,Mover Group 3 Details,Flag indicating move was more than 50 miles (mover group 3),MVG3LOC,Not Available
+Recent Movers,Mover Group 3 Details,Type of structure of former home (mover group 3),MVG3TYPE,XUNIT
+Recent Movers,Mover Group 3 Details,Tenure of former home (mover group 3),MVG3TEN,XTEN
+Recent Movers,Mover Group 3 Details,Number of people in former home (mover group 3),MVG3PER,XPER
+Recent Movers,Mover Group 3 Details,Flag indicating former home was owned/rented by someone in current home (mover group 3),MVG3STAT,XHEAD
+Recent Movers,Mover Group 3 Details,Comparison of housing costs to former home (mover group 3),MVG3COST,XCOST
+Healthy Homes,Asthma and Air Quality,Flag indicating household has child with asthma,ASTHMA,ASTHMA
+Healthy Homes,Asthma and Air Quality,Flag indicating person has asthma,PASTHWHO,PASTHWHO
+Healthy Homes,Asthma and Air Quality,Flag indicating emergency room visit for asthma,ASTHEMR,ASTHEMR
+Healthy Homes,Asthma and Air Quality,Flag indicating quick relief asthma inhaler used in past 3 months,ASTH1MED,ASTHMED
+Healthy Homes,Asthma and Air Quality,Frequency of preventative asthma medication use,ASTH2MED,Not Available
+Healthy Homes,Asthma and Air Quality,Frequency of musty smells within last 12 months,MUST,MUST
+Healthy Homes,Asthma and Air Quality,Frequency of smoking in home within last 12 months,SMKR,SMKR
+Healthy Homes,Asthma and Air Quality,Frequency secondhand smoke entering home within last 12 months,SECSMK,SECSMK
+Healthy Homes,Asthma and Air Quality,Flag indicating the home has been tested for radon,RADONTEST,Not Available
+Healthy Homes,Asthma and Air Quality,Flag indicating radon test results suggested household take action to reduce radon level,RADONSUG,Not Available
+Healthy Homes,Asthma and Air Quality,Flag indicating household took action to reduce radon exposure,RADONACT,Not Available
+Healthy Homes,Safety Features,Flag indicating children under 7 live in or  regularly visit the unit,SAFEU7KD,SAFEU5KD
+Healthy Homes,Safety Features,Presence of tamper resistant outlet covers,OUTLET,OUTLET
+Healthy Homes,Safety Features,"Storage of chemicals, pesticides, cleaning supplies, and medicines",CHEMSTOR,CHEMSTOR
+Healthy Homes,Safety Features,Type of use and condition of extension cords ,EXTCORD,EXTC
+Healthy Homes,Safety Features,Type of outdoor pool safety measures,POOLSAFE,POOLFEN
+Healthy Homes,Safety Features,Flag indicating presence of stairs within unit,STAIRS,STAIRS
+Healthy Homes,Safety Features,Condition of stair railings inside unit,STAIRRL,STAIRRL
+Healthy Homes,Safety Features,Flag indicating stairways have missing or broken railings,STAIRMIS,STAIRMIS
+Healthy Homes,Safety Features,Flag indicating stairways have missing or broken steps,STAIRBRK,STAIRBRK
+Healthy Homes,Safety Features,Flag indicating non-slip coverings on stairs,STAIRCOV,STAIRCOV
+Healthy Homes,Safety Features,Flag indicating all staircases are well lit,STAIRLGT,STAIRLGT
+Healthy Homes,Safety Features,Flag indicating gates on the stairs,STAIRGAT,STAIRGAT
+Healthy Homes,Water Quality,Type of well,WELLTYPE,WELL
+Healthy Homes,Water Quality,Number of units served by this household's private well,WELLUSERS,WELDUS
+Healthy Homes,Water Quality,Flag indicating respondent thinks water is drinking and cooking,WATSAFE,WATERS
+Healthy Homes,Water Quality,Source of drinking water,WATDRINK,WATERD
+Healthy Homes,Water Quality,Type of accessibility and monitoring of hot water heater,WATTEMP,H20MF
+Food Security,Food Security,"Adults in the household worried food would run out before there was money to buy more, in the last 30 days",FSWORRY,Not Available
+Food Security,Food Security,"Food didn't last and the household couldn't afford to buy more, in the last 30 days",FSLAST,Not Available
+Food Security,Food Security,"Adults in the household couldn't afford to eat balanced meals, in the last 30 days",FSAFFORD,Not Available
+Food Security,Food Security,"Flag indicating adults in the household cut or skipped meals, in the last 30 days",FSSKIPMEAL,Not Available
+Food Security,Food Security,"Number of days adults in the household cut or skipped meals, in the last 30 days",FSMEALDAYS,Not Available
+Food Security,Food Security,"Flag indicating adults in the household ate less than they felt they should because there wasn't enough money for food, in the last 30 days",FSEATLESS,Not Available
+Food Security,Food Security,"Flag indicating adults in the household were hungry due to not having money for food, in the last 30 days",FSHUNGRY,Not Available
+Food Security,Food Security,"Flag indicating adults in the household lost weight due to not having money for food, in the last 30 days",FSLOSTWGT,Not Available
+Food Security,Food Security,"Flag indicating adults in the household didn't eat for a whole day, in the last 30 days",FSNOFOOD,Not Available
+Food Security,Food Security,"Number of days adults in the household did not eat, in the last 30 days",FSNODAYS,Not Available
+Food Security,Food Security,Rating of overall food security of the household,FSSTATUS,Not Available
+Housing Counseling,Housing Counseling,Flag indicating the respondent received advice or counseling from a professional housing counselor in the last two years,HCAVICE,Not Available
+Housing Counseling,Housing Counseling,Flag indicating type of housing counseling advice,HCOORR,Not Available
+Housing Counseling,Housing Counseling,Flag indicating housing counseling advice was to help with a decision to purchase a new home,HCOWNBUY,Not Available
+Housing Counseling,Housing Counseling,Flag indicating housing counseling advice was to help avoid foreclosure,HCOWNFORE,Not Available
+Housing Counseling,Housing Counseling,Flag indicating housing counseling  advice was to help refinance or to obtain a reverse mortgage,HCOWNREFI,Not Available
+Housing Counseling,Housing Counseling,"Flag indicating housing counseling  advice was to resolve a conflict with a homeowners association, neighbor or former owner",HCOWNCON,Not Available
+Housing Counseling,Housing Counseling,Flag indicating housing counseling  advice was for some other reason related to owning,HCOWNOTH,Not Available
+Housing Counseling,Housing Counseling,Flag indicating housing counseling  advice was to understand the rights with respect  to Fair Housing,HCRENTFAIR,Not Available
+Housing Counseling,Housing Counseling,Flag indicating housing counseling  advice was to help avoid eviction,HCRENTEVIC,Not Available
+Housing Counseling,Housing Counseling,Flag indicating housing counseling  advice was to mediate a conflict with the landlord,HCRENTLLRD,Not Available
+Housing Counseling,Housing Counseling,Flag indicating housing counseling  advice was to help mediate a conflict with a neighbor or roommate,HCRENTNGH,Not Available
+Housing Counseling,Housing Counseling,Flag indicating housing counseling  advice was for some other reason related to renting,HCRENTOTH,Not Available
+Housing Counseling,Housing Counseling,Flag indicating respondent paid a fee for the housing counseling,HCPAY,Not Available
+Housing Counseling,Housing Counseling,Amount of housing counseling fee,HCAMT,Not Available
+Housing Counseling,Housing Counseling,Flag indicating the housing counseling was helpful in answering questions or resolving housing issue,HCHELP,Not Available
+Art,Art,Flag indicating access to arts and cultural events played role in neighborhood choice,ARTACCESS,Not Available
+Art,Art,Rating of the importance of living near arts and cultural events,ARTNEARBY,Not Available
+Art,Art,Rating of satisfaction with arts and cultural events in neighborhood,ARTSATIS,Not Available
+Art,Art,Agree or disagree: Arts and cultural events improve neighborhood quality,ARTIMPROVE,Not Available
+Art,Art,Agree or disagree: Arts and cultural events attract tourists,ARTATTRACT,Not Available
+Art,Art,Agree or Disagree: Arts and cultural events create employment opportunities,ARTJOBS,Not Available
+Art,Art,Agree or Disagree: Arts and cultural events improve local economy,ARTECON,Not Available
+Art,Art,Agree or Disagree: Arts and cultural events provide opportunities for greater social interaction,ARTSOC,Not Available
+Art,Art,Agree or Disagree: Arts and cultural events encourage understanding and awareness of other people or cultures,ARTAWARE,Not Available
+Art,Art,Agree or Disagree: Arts and cultural events improve image and identity of neighborhood,ARTIDENT,Not Available
