@@ -1,0 +1,12 @@
+historic_median_income.xls - U.S. Census Bureau (Sep. 13, 2021). Table D-1 Historic Median Income Using Alternative Price Indices: 1967 to 2021. Retrieved Jan. 16, 2024 from: https://www.census.gov/library/publications/2022/demo/p60-276.html
+
+historic_house_prices_by_characteristic.xlsx - U.S. Census Bureau (n.d.). Current Data: Sale Price of Single Family Sold. Retrieved Jan. 16, 2024 from: https://www.census.gov/construction/chars/current.html
+
+
+mortgage_rates_30yr.csv - St. Louis Federal Reserve Bank (n.d.) 30-Year Fixed Rate Mortgage Average in the United States. Retrieved Jan. 21, 2024 from: https://fred.stlouisfed.org/series/MORTGAGE30US
+
+cpi_urban_us - St. Louis Federal Reserve Bank (n.d.) Consumer Price Index for 
+All Urban Consumers: All Items in U.S. City Average. Retrieved Jan. 21, 2024 from 
+https://fred.stlouisfed.org/series/CPIAUCSL
+
+historic_house_size.xls - U.S. Census Bureau (n.d.) Characteristics of New Housing. Retrieved Jan. 24, 2024 from https://www.census.gov/construction/chars/completed.html
