@@ -60,29 +60,30 @@ load_ahs_data <- function(url, data_path = "data") {
     # TENURE - Ownership status (character)
     # MARKETVAL/VALUE - Market value of house (numeric)
     # HINCP/ZINC2 - Household income (numeric)
+    # TOTHCAMT/ZSMHC - Total monthly housing costs (numeric)
     if (survey_year >= 2015) {
         data <- read_csv(
             temp,
-            col_select = c("CONTROL", "WEIGHT", "INTSTATUS", "TENURE", "MARKETVAL", "HINCP"),
-            col_types = "cdccdd"
+            col_select = c("CONTROL", "WEIGHT", "INTSTATUS", "TENURE", "MARKETVAL", "HINCP", "TOTHCAMT"),
+            col_types = "cdccddd"
             ) %>% mutate(YEAR = survey_year)
     } else if (survey_year >= 2001) { # Variable names changed in 2015
         data <- read_csv(
             temp,
-            col_select = c("CONTROL", "WGT90GEO", "ISTATUS", "TENURE", "VALUE", "ZINC2"),
-            col_types = "cdccdd", 
+            col_select = c("CONTROL", "WGT90GEO", "ISTATUS", "TENURE", "VALUE", "ZINC2", "ZSMHC"),
+            col_types = "cdccddd", 
             na = c("", "NA", ".", paste0("'", toupper(letters), "'")) # Missing data indicated with . and, in some cases, letters
             ) %>% 
-            rename(WEIGHT = WGT90GEO, INTSTATUS = ISTATUS, MARKETVAL = VALUE, HINCP = ZINC2) %>% 
+            rename(WEIGHT = WGT90GEO, INTSTATUS = ISTATUS, MARKETVAL = VALUE, HINCP = ZINC2, TOTHCAMT = ZSMHC) %>% 
             mutate(YEAR = survey_year)
     } else { # WEIGHTING VARIABLE CHANGED IN 2001
         data <- read_csv(
             temp, 
-            col_select = c("CONTROL", "WEIGHT", "ISTATUS", "TENURE", "VALUE", "ZINC2"),
-            col_types = "cdccdd", 
+            col_select = c("CONTROL", "WEIGHT", "ISTATUS", "TENURE", "VALUE", "ZINC2", "ZSMHC"),
+            col_types = "cdccddd", 
             na = c("", "NA", ".", paste0("'", toupper(letters), "'")) # Missing data indicated with . and, in some cases, letters
             ) %>% 
-            rename(INTSTATUS = ISTATUS, MARKETVAL = VALUE, HINCP = ZINC2) %>% 
+            rename(INTSTATUS = ISTATUS, MARKETVAL = VALUE, HINCP = ZINC2, TOTHCAMT = ZSMHC) %>% 
             mutate(YEAR = survey_year)
     }
     write_dataset(

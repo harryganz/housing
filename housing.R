@@ -8,7 +8,7 @@ library(ggplot2)
 
 # Read Consumer Price Index values for years 1974-2023 for use in 
 # Adjusting home value and household income
-historic_cpi <- read_csv("./data/cpi_urban_us.csv") %>% mutate(YEAR = as.numeric(substr(DATE, 1, 4)))
+historic_cpi <- read_csv("./data/cpi_urban_us.csv") %>% mutate(Year = as.numeric(substr(DATE, 1, 4)))
 
 #' Calculates the adjusted (real) value of an item
 #' at the current (or target) time using the 
@@ -53,40 +53,42 @@ weighted_median <- function(x, weights) {
   } else {
     x[i]
   }
-} 
-
-# Adjust prices to 2023 value
-cpi_value <- function(value, year, current_year = 2023) {
-  current_cpi = historic_cpi$CPIAUCSL[historic_cpi$YEAR == current_year]
-  cpi_adj(value, current_cpi, historic_cpi$CPIAUCSL[historic_cpi$YEAR == year])
 }
 
 
 
 ahs <- open_dataset("data/ahs")
 
-ahs_summary <- ahs %>%
-    rename(Year = YEAR) %>%
-    filter(INTSTATUS == "'1'" & TENURE == "'1'" & HINCP > 0) %>% # Interview complete and owner-occupied
-    group_by(Year) %>%
-    collect() %>%
-    summarize(
-      `Median House Value`= weighted_median(MARKETVAL, WEIGHT)/1000,
-      `Median Household Income` = weighted_median(HINCP, WEIGHT)/1000,
-      `House Value : Household Income` = weighted_median(MARKETVAL/HINCP, WEIGHT)
-    )
+ahs_year <- ahs %>%
+  rename(Year = YEAR) %>%
+  filter(INTSTATUS == "'1'") %>% # completed interview
+  group_by(Year)
 
-# Plots
- p_income_value_year <- ahs_summary %>%
-  pivot_longer(!c(Year, `House Value : Household Income`), names_to = "Category", values_to = "Thousands USD") %>% 
-  ggplot(aes(x = Year, y = `Thousands USD`, color = `Category`)) +
-  geom_line() + 
-  ggtitle("House Value and Household Income (CPI Adjusted to 2023 Dollars)") + 
-  scale_y_continuous(limits = c(0, max(ahs_summary$`Median House Value`))) +
-  theme_minimal()
+income <- ahs_year %>%
+  filter(HINCP > -9999999) %>%
+  collect() %>%
+  summarize(
+    household_income = weighted_median(HINCP, WEIGHT)
+  )
 
-p_ratio_income_house_year <- ahs_summary %>% 
-  ggplot(aes(x = Year, y = `House Value : Household Income`)) +
-  geom_line() +
-  ggtitle("Ratio of Median House Value to Household Income") +
-  theme_minimal()
+housing_costs <- ahs_year %>% 
+  filter(TENURE %in% c("'1'", "'2'")) %>% # Owner or Renter
+  collect() %>%
+  summarize(
+    housing_costs = weighted_median(TOTHCAMT, WEIGHT)
+  )
+
+house_value <- ahs_year %>% 
+  filter(TENURE == "'1'" & MARKETVAL >= 0) %>%
+  collect() %>%
+  summarise(
+    house_value = weighted_median(MARKETVAL, WEIGHT)
+  )
+
+ahs_combined <- income %>%
+  inner_join(housing_costs, by = "Year") %>% 
+  inner_join(house_value, by = "Year") %>%
+  mutate(
+    value_to_income = house_value/household_income * 100,
+    cost_to_income = (housing_costs*12)/household_income * 100
+  )
