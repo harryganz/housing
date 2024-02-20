@@ -20,7 +20,7 @@ This is an R project which takes data from various sources, mostly the U.S. Cens
 This project uses [renv](https://rstudio.github.io/renv/articles/renv.html) to manage dependencies. You can install it via the `install.packages('renv')` command in R, then install the required packages by running:
 
 ```{r}
-renv::init()
+renv::restore()
 ```
 
 If using an OS other than Mac and Windows, you may have some issues installing native extensions for the arrow package as it has requirements beyond RTools. Take a look [at the documentation](https://arrow.apache.org/docs/r/) if you have issues.
