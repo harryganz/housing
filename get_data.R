@@ -32,7 +32,7 @@ DOWNLOADED_FILES_PATH <- "downloaded_files.txt"
 #' Loads AHS national data from census website to data folder
 #' in partitioned parquet format. Renames and recodes columns to match 2021 format
 #' @param url The url location of the National Flat file for a particular year.
-#' must match, ^https://www2.census.gov/programs-surveys/ahs/[0-9]{4}.*Flat%20CSV.zip$
+#' must match, ^https://www2.census.gov/programs-surveys/ahs/[0-9]{4}.*CSV.zip$
 #' @param data_path Relative path of folder in which to place the output files
 load_ahs_data <- function(url, data_path = "data") {
     if (!grepl("^https://www2.census.gov/programs-surveys/ahs/[0-9]{4}.*CSV.zip$", url)) {
