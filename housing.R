@@ -133,8 +133,9 @@ fig5 <- ahs_year %>%
   mutate(Ownership = ifelse(TENURE == "'1'", "Owner", "Renter")) %>%
   group_by(Year, Ownership) %>%
   summarise(
-    `Housing Costs : Income` = weighted_median((TOTHCAMT * 12)/HINCP, WEIGHT)
+    `Housing Costs : Income (%)` = weighted_median((TOTHCAMT * 12)/HINCP, WEIGHT) * 100
   ) %>%
-  ggplot(aes(x = Year, y = `Housing Costs : Income`, color = Ownership)) +
+  ggplot(aes(x = Year, y = `Housing Costs : Income (%)`, color = Ownership)) +
   geom_line() +
   theme_minimal()
+ggsave("./figures/fig5.png", fig5, units = "in", height = 4, width = 6, bg = "#FFFFFF")
