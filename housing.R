@@ -59,16 +59,16 @@ ahs_combined <- income %>%
   inner_join(historic_cpi %>% select(Year, CPIAUCSL), by = "Year") %>%
   inner_join(mortage_rates %>% select(Year, MORTGAGE30US), by = "Year") %>%
   mutate(
-    household_income = cpi_adj(household_income, cpi_2023, CPIAUCSL),
-    housing_costs = cpi_adj(housing_costs, cpi_2023, CPIAUCSL),
-    house_value = cpi_adj(house_value, cpi_2023, CPIAUCSL),
+    household_income_adj = cpi_adj(household_income, cpi_2023, CPIAUCSL),
+    housing_costs_adj = cpi_adj(housing_costs, cpi_2023, CPIAUCSL),
+    house_value_adj = cpi_adj(house_value, cpi_2023, CPIAUCSL),
   ) %>%
   mutate(
     # Expected mortgage payment for a new house with a 20% down payment
-    expected_mortgage_payment = pmt(house_value * 0.8, MORTGAGE30US / 1200, 30 * 12)
+    expected_mortgage_payment = pmt(house_value_adj * 0.8, MORTGAGE30US / 1200, 30 * 12)
   ) %>% 
   mutate(
-    mortgage_to_income = (expected_mortgage_payment * 12) / household_income * 100
+    mortgage_to_income = (expected_mortgage_payment * 12) / household_income_adj * 100
   ) %>%
   select(-c(CPIAUCSL, MORTGAGE30US))
 
@@ -91,15 +91,6 @@ fig1 <- ahs_combined %>%
   theme_minimal()
 
 ggsave("./figures/fig1.png", fig1, units = "in", height = 4, width = 6, bg = "#FFFFFF")
-
-# Create plot of housing costs
-fig2 <- ahs_combined %>%
-  rename(`Monthly Housing Costs ($)` = housing_costs) %>%
-  ggplot(aes(x = Year, y = `Monthly Housing Costs ($)`)) +
-  geom_line() +
-  theme_minimal()
-
-ggsave("./figures/fig2.png", fig2, units = "in", height = 4, width = 6, bg = "#FFFFFF")
 
 # Create a plot of expected mortgage payment for a new home
 fig3 <- ahs_combined %>%
