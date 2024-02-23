@@ -42,7 +42,8 @@ housing_costs <- ahs_year %>%
   filter(TENURE %in% c("'1'", "'2'")) %>% # Owner or Renter
   collect() %>%
   summarize(
-    housing_costs = weighted_median(TOTHCAMT, WEIGHT)
+    housing_costs = weighted_median(TOTHCAMT, WEIGHT),
+    cost_to_income = weighted_median((TOTHCAMT * 12) / HINCP, WEIGHT) * 100
   )
 
 house_value <- ahs_year %>% 
@@ -57,10 +58,6 @@ ahs_combined <- income %>%
   inner_join(house_value, by = "Year") %>%
   inner_join(historic_cpi %>% select(Year, CPIAUCSL), by = "Year") %>%
   inner_join(mortage_rates %>% select(Year, MORTGAGE30US), by = "Year") %>%
-  mutate(
-    value_to_income = house_value/household_income * 100,
-    cost_to_income = (housing_costs*12)/household_income * 100
-  ) %>%
   mutate(
     household_income = cpi_adj(household_income, cpi_2023, CPIAUCSL),
     housing_costs = cpi_adj(housing_costs, cpi_2023, CPIAUCSL),
@@ -129,3 +126,15 @@ fig4 <- ahs_combined %>%
   theme_minimal()
 
 ggsave("./figures/fig4.png", fig4, units = "in", height = 4, width = 6, bg = "#FFFFFF")
+
+fig5 <- ahs_year %>% 
+  filter(TENURE %in% c("'1'", "'2'")) %>%
+  collect() %>%
+  mutate(Ownership = ifelse(TENURE == "'1'", "Owner", "Renter")) %>%
+  group_by(Year, Ownership) %>%
+  summarise(
+    `Housing Costs : Income` = weighted_median((TOTHCAMT * 12)/HINCP, WEIGHT)
+  ) %>%
+  ggplot(aes(x = Year, y = `Housing Costs : Income`, color = Ownership)) +
+  geom_line() +
+  theme_minimal()
