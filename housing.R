@@ -72,6 +72,7 @@ ahs_combined <- income %>%
   ) %>%
   select(-c(CPIAUCSL, MORTGAGE30US))
 
+
 # Create a plot showing house prices and household income
 fig1 <- ahs_combined %>% 
   select(Year, household_income, house_value) %>%
@@ -89,44 +90,50 @@ fig1 <- ahs_combined %>%
   geom_line() +
   ylim(0, 400) +
   theme_minimal()
+ggsave("./figures/fig1.png", fig1, units = "in", height = 4, width = 8, bg = "#FFFFFF")
 
-ggsave("./figures/fig1.png", fig1, units = "in", height = 4, width = 6, bg = "#FFFFFF")
-
-# Create a plot of expected mortgage payment for a new home
-fig3 <- ahs_combined %>%
-  rename(`Expected Monthly Payment ($)` = expected_mortgage_payment) %>%
-  ggplot(aes(x = Year, y = `Expected Monthly Payment ($)`)) +
+fig2 <- ahs_combined %>%
+  ggplot(aes(x = Year, y = expected_mortgage_payment)) +
   geom_line() +
+  ylab("Expected Mortgage Payment ($)") +
   theme_minimal()
 
+ggsave("./figures/fig2.png", fig2, units = "in", height = 4, width = 6, bg = "#FFFFFF")
 
-ggsave("./figures/fig3.png", fig3, units = "in", height = 4, width = 6, bg = "#FFFFFF")
-
-# Create a plot of housing costs and expected payment to monthly income
-fig4 <- ahs_combined %>%
-  select(Year, mortgage_to_income, cost_to_income) %>%
-  rename(`Mortgage : Income` = mortgage_to_income, `Housing Costs : Income` = cost_to_income) %>%
-  pivot_longer(
-    c(`Mortgage : Income`, `Housing Costs : Income`),
-    names_to = "Category",
-    values_to = "%"
-  ) %>%
-  ggplot(aes(x = Year, y = `%`, color = Category)) +
-  geom_line() +
-  ylim(10, 30) +
-  theme_minimal()
-
-ggsave("./figures/fig4.png", fig4, units = "in", height = 4, width = 6, bg = "#FFFFFF")
-
-fig5 <- ahs_year %>% 
+costs_to_ownership <- ahs_year %>%
   filter(TENURE %in% c("'1'", "'2'")) %>%
   collect() %>%
   mutate(Ownership = ifelse(TENURE == "'1'", "Owner", "Renter")) %>%
   group_by(Year, Ownership) %>%
   summarise(
-    `Housing Costs : Income (%)` = weighted_median((TOTHCAMT * 12)/HINCP, WEIGHT) * 100
-  ) %>%
-  ggplot(aes(x = Year, y = `Housing Costs : Income (%)`, color = Ownership)) +
+    housing_costs = weighted_median(TOTHCAMT, WEIGHT),
+    cost_to_income = weighted_median((TOTHCAMT * 12) / HINCP, WEIGHT),
+    household_income = weighted_median(HINCP, WEIGHT)
+  ) %>% 
+  inner_join(historic_cpi, by = "Year") %>%
+  mutate(
+    housing_costs = cpi_adj(housing_costs, cpi_2023, CPIAUCSL),
+    houshold_income = cpi_adj(household_income, cpi_2023, CPIAUCSL)
+    )
+
+fig3 <- costs_to_ownership %>%
+  ggplot(aes(x = Year, y = housing_costs, color = Ownership)) +
   geom_line() +
+  ylab("Housing Costs ($)") +
   theme_minimal()
-ggsave("./figures/fig5.png", fig5, units = "in", height = 4, width = 6, bg = "#FFFFFF")
+ggsave("./figures/fig3.png", fig3, units = "in", height = 4, width = 8, bg = "#FFFFFF")
+
+fig4 <- costs_to_ownership %>%
+  ggplot(aes(x = Year, y = cost_to_income*100, color = Ownership)) +
+  geom_line() +
+  ylab("Costs : Income (%)") +
+  theme_minimal()
+ggsave("./figures/fig4.png", fig4, units = "in", height = 4, width = 8, bg = "#FFFFFF")
+
+fig5 <- costs_to_ownership %>%
+  ggplot(aes(x = Year, y = household_income/1000, color = Ownership)) +
+  geom_line() +
+  ylab("Household Income (Thousands $)") +
+  theme_minimal()
+ggsave("./figures/fig5.png", fig5, units = "in", height = 4, width = 8, bg = "#FFFFFF")
+
